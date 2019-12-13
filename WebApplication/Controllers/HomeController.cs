@@ -20,8 +20,14 @@ namespace WebApplication.Controllers
                 Number = CustomRandomHelper.RandomNumber(3, 7)
             };
             model.Articles = DatabaseHelper.GetAllArticles();
+            var article1 = DatabaseHelper.GetArticleByid(1);
 
             return View(model);
+        }
+
+        public ActionResult Article(int id, string name)
+        {
+            return View();
         }
     }
 }

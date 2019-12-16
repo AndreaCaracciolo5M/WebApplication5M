@@ -8,5 +8,6 @@ namespace WebApplication.Models
     public class BaseModel
     {
         public string Title { get; set; }
+        public string Text { get; set; }
     }
 }

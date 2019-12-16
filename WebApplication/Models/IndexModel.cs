@@ -8,7 +8,6 @@ namespace WebApplication.Models
 {
     public class IndexModel : BaseModel
     {
-        public string Text { get; set; }
         public int Number { get; set; }
         public List<Article> Articles { get; set; }
 

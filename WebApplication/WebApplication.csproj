@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Helpers\CustomRandomHelper.cs" />
     <Compile Include="Helpers\DatabaseHelper.cs" />
+    <Compile Include="Models\ArticleModel.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Entities\Article.cs" />
     <Compile Include="Models\Entities\BaseEntity.cs" />
@@ -134,6 +135,7 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Article.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -20,14 +20,20 @@ namespace WebApplication.Controllers
                 Number = CustomRandomHelper.RandomNumber(3, 7)
             };
             model.Articles = DatabaseHelper.GetAllArticles();
-            var article1 = DatabaseHelper.GetArticleByid(1);
 
             return View(model);
         }
 
         public ActionResult Article(int id, string name)
         {
-            return View();
+            var model = new ArticleModel();
+            if(!string.IsNullOrWhiteSpace(name))
+            {
+                model.Title = name;
+            }
+            model.AuthorLabel = "Autore";
+            model.Article = DatabaseHelper.GetArticleByid(id);
+            return View(model);
         }
     }
 }

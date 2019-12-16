@@ -1,0 +1,24 @@
+﻿@model WebApplication.Models.ArticleModel
+@{
+    Layout = "~/Views/Shared/_BaseLayoutPage.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        Titolo : @Model.Article.Title
+    </div>
+    <div class="col-md-6">
+        Autore : @Model.Article.Author
+    </div>
+    <div class="col-md-6">
+        Data : @Model.Article.Date
+    </div>
+    <div class="col-md-6">
+        @Model.Article.Text
+    </div>
+</div>
+<a href="/Home">
+    <h3>TORNA ALLA HOME</h3>
+</a>
+

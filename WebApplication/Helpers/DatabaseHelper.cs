@@ -24,6 +24,16 @@ namespace WebApplication.Helpers
             }
             return articles;
         }
+        public static Article GetArticle(int id)
+        {
+            var article = new Article();
+            using (var connection = new MySqlConnection(ConnectionString))
+            {
+                var sql = "select * from article where @id";
+                article = connection.Query<Article>(sql, new { id }).FirstOrDefault();
+            }
+            return article;
+        }
 
 
     }

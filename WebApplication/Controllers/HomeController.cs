@@ -23,5 +23,16 @@ namespace WebApplication.Controllers
 
             return View(model);
         }
+        public ActionResult Article(int id)
+        {
+            var article = DatabaseHelper.GetArticle(id);
+            var model = new ArticleModel
+            {
+                Title = "Salvo",
+                Article = article,
+            };
+
+            return View(model);
+        }
     }
 }
